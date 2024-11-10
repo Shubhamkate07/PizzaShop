@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const  bcrypt = require('bcrypt');
+const  bcryptjs = require('bcryptjs');
+
 const PORT=5000;
 
 const app = express();
@@ -97,7 +98,7 @@ app.post('/regi',async (req,res)=>{
 
     }
 
-    const hashedPassword= await bcrypt.hash(Datareg.password, 10);
+    const hashedPassword= await bcryptjs.hash(Datareg.password, 10);
 
     Datareg.password=hashedPassword;
 
@@ -128,7 +129,7 @@ app.post('/log', async(req,res)=>{
         return res.json('User Not found Please register..');
     }
 
-    const isPasswordMatch= await bcrypt.compare(DataLogin.password, user.password);
+    const isPasswordMatch= await bcryptjs.compare(DataLogin.password, user.password);
 
     if(!isPasswordMatch){
         return res.json('Invalid username password or phonenumber')
