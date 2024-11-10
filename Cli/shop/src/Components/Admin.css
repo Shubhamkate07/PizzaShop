@@ -1,0 +1,66 @@
+/* Style the main container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Style the header */
+.container h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Style the sub-header */
+.container h4 {
+    font-size: 1.8rem;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #34495e;
+}
+
+/* Style the info count */
+.container p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style each order item */
+.order-item {
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Style each key-value pair */
+.order-item p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Add a key-value pair spacing */
+.order-item p:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+/* Add different colors to each key-value pair */
+.order-item p:nth-child(odd) {
+    color: #e74c3c;
+}
+
+.order-item p:nth-child(even) {
+    color: #3498db;
+}
