@@ -25,7 +25,7 @@ const Register = () => {
     e.preventDefault();
     console.log('Form Data:', formData);
 
-    await axios.post('http://127.0.0.1:5000/regi', formData).then((res)=>{
+    await axios.post('https://pizzashop-1-r3ts.onrender.com/regi', formData).then((res)=>{
 if(res.data==='User Alerdy Exists with this Number.'){
   toast.error('User Alerdy Exists..',{
     position:'top-center'
