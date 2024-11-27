@@ -3,7 +3,7 @@
 // import './Admin.css'
 
 // const Admin = () => {
-//     const [info, setInfo] = useState([]);
+//     const [info, setInfo] = useState([]); 
 
 //     useEffect(() => {
 //         const getData = async () => {
