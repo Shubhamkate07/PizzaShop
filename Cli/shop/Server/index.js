@@ -1,16 +1,19 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const  bcryptjs = require('bcryptjs');
 
-const PORT=5000;
+const mongo_uri=process.env.MONGO_URI;
+
+const PORT=process.env.PORT || 5001;
+console.log(mongo_uri);
+
 
 const app = express();
 app.use(express.json()); // body parser to handle i/p sent by user however user send data in form format then in using postman we sent data in json format then in encoded format so all this handled by bodyparser we get data in which format we need.
 app.use(cors());
-mongoose.connect('mongodb://127.0.0.1:27017/Food'
-   )
-.then(() => console.log('MongoDB connected'))
+mongoose.connect(mongo_uri).then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
 
