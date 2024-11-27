@@ -21,7 +21,7 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-          await axios.post('https://pizzashop-2.onrender.com/log', credentials).then((res)=>{
+          await axios.post('http://127.0.0.1:5000/log', credentials).then((res)=>{
                 if(res.data==='User Not found Please register..'){
 toast.error('User Not found Please register..',{
     position:'top-center'
