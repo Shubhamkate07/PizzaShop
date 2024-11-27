@@ -51,7 +51,7 @@ const Admin = () => {
 
     useEffect(() => {
         const getData = async () => {
-            await axios.get('http://127.0.0.1:5000/check').then((res) => {
+            await axios.get('https://pizzashop-2.onrender.com/check').then((res) => {
                 setInfo(res.data); // Update state with fetched data
                 console.log('Fetched data:', res.data); // Log the actual data received
                 console.log('Fetching data...'); // Log fetching message
