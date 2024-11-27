@@ -22,7 +22,7 @@ const AdminLogin = () => {
 
         console.log(AdminDat);
 
-        await axios.post('https://pizzashop-1-r3ts.onrender.com/admi', AdminDat)
+        await axios.post('http://127.0.0.1:5000/admi', AdminDat)
         .then((res) => {
             if (res.data === 'you are not authentic user') {
                 console.log('you are not authentic user');

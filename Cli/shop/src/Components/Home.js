@@ -54,7 +54,7 @@ const Home = () => {
     console.log('Pizza Types:', pizzaTypes);
     setuser(pizzaTypes);
 
-    await axios.post('https://pizzashop-1-r3ts.onrender.com/order', pizzaTypes).then((res) => {
+    await axios.post('http://127.0.0.1:5000/order', pizzaTypes).then((res) => {
       console.log(res.data); // print  res.send("order send but why on console and not on page now possible"); on console
       setresjsondata(res.data);// print this  res.send("order send but why on console and not on page now possible");on page as well res.data set data sending  from backend to frontend from /order route
     }).catch((err) => {
